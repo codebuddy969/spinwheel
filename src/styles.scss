@@ -1,0 +1,48 @@
+@mixin fontface($name, $file, $weight: normal, $style: normal){
+    @font-face {
+        font-family: "#{$name}";
+        src: url('/assets/fonts/#{$file}.eot');
+        src: url('/assets/fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/#{$file}.woff') format('woff'),
+        url('/assets/fonts/#{$file}.ttf') format('truetype'),
+        url('/assets/fonts/#{$file}.svg?#webfont') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include fontface('Synthese', 'Synthese-Regular', 400);
+@include fontface('Synthese', 'Synthese-Bold', 700);
+@include fontface('Karla', 'Karla-Regular', 400);
+@include fontface('Icomoon', 'icomoon');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: normal;
+    list-style: none;
+    line-height: 22px;
+    text-decoration: none;
+    box-sizing: border-box;
+    word-break: break-word;
+    font-family: "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+}
