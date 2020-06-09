@@ -1,0 +1,38 @@
+:host {
+    display: block;
+    padding: 10px 13px 0;
+}
+
+h3 {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: bold;
+    letter-spacing: -0.015em;
+    font-family: "Synthese", sans-serif;
+}
+
+.chart {
+    height: 8px;
+    border-radius: 4px;
+    margin: 10px 0 5px;
+    background: rgb(243, 163, 58, 0.2);
+    span {
+        height: 8px;
+        display: block;
+        border-radius: 4px;
+        background: #F3A33A;
+    }
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.015em;
+        font-family: "Synthese", sans-serif;
+    }
+}

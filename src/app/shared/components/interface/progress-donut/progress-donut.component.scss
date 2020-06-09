@@ -1,0 +1,74 @@
+:host {
+    display: flex;
+    padding: 26px 25px 40px;
+}
+
+.chart {
+    width: 100%;
+    max-width: 124px;
+}
+
+.info {
+    min-width: 140px;
+    padding-left: 26px;
+    h3 {
+        color: #5F5F5F;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.015em;
+    }
+}
+
+.card {
+    &:last-of-type {
+        padding-top: 10px;
+    }
+}
+
+.card-price {
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    font-family: "Synthese", sans-serif;
+    span {
+        padding: 2px 8px;
+        color: #F3A33A;
+        font-size: 14px;
+        margin-left: 8px;
+        line-height: 22px;
+        border-radius: 2px;
+        letter-spacing: -0.015em;
+        background: rgba(243, 163, 58, 0.2);
+    }
+}
+
+.card-type {
+    color: #000000;
+    font-size: 12px;
+    line-height: 22px;
+    span {
+        width: 8px;
+        height: 8px;
+        margin-right: 10px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}
+
+svg {
+    font-family: "Synthese", sans-serif;
+    .amount {
+        fill: #000000;
+        font-size: 58px;
+        font-weight: bold;
+        font-family: inherit;
+    }
+    .footer {
+        fill: #5F5F5F;
+        font-size: 32px;
+        text-align: center;
+        font-family: inherit;
+        letter-spacing: -0.015em;
+    }
+}

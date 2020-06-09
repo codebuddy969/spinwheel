@@ -1,0 +1,18 @@
+<div class="chart">
+    <svg #donut viewBox="0 0 360 360">
+        <text class="amount" x="50%" y="47%" text-anchor="middle">${{totalAmount.toLocaleString()}}</text>
+        <text class="footer" x="50%" y="60%" text-anchor="middle">You’ve Paid a</text>
+        <text class="footer" x="50%" y="72%" text-anchor="middle">Total of</text>
+    </svg>
+</div>
+<div class="info">
+    <h3>Here’s where it went</h3>
+    <div class="card">
+        <div class="card-price">${{principal.toLocaleString()}} <span>{{principalP}}%</span></div>
+        <div class="card-type"><span [style.background]="'#F3A33A'"></span> Principal Paid</div>
+    </div>
+    <div class="card">
+        <div class="card-price">${{interest.toLocaleString()}} <span>{{interestP}}%</span></div>
+        <div class="card-type"><span [style.background]="'#F9CE46'"></span> Interest Paid</div>
+    </div>
+</div>

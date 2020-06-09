@@ -1,0 +1,15 @@
+$color-primary: #F3A33A;
+$color-secondary: #6848E2;
+
+@mixin truncate($width){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: $width;
+}
+
+@function proportions($min,$target, $screen:1440) {
+    $vw-context: ($screen*.01) * 1;
+    $vw-converted: ($min/$vw-context);
+    @return calc(#{$min + px} + #{($target/$vw-context - $vw-converted + vw)});
+}

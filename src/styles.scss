@@ -1,3 +1,5 @@
+@import '~primeng/resources/primeng.min.css';
+
 @mixin fontface($name, $file, $weight: normal, $style: normal){
     @font-face {
         font-family: "#{$name}";
@@ -11,7 +13,7 @@
     }
 }
 
-@include fontface('Synthese', 'Synthese-Regular', 400);
+@include fontface('Synthese', 'Synthese-Regular');
 @include fontface('Synthese', 'Synthese-Bold', 700);
 @include fontface('Karla', 'Karla-Regular', 400);
 @include fontface('Icomoon', 'icomoon');
@@ -46,3 +48,74 @@ span {
     letter-spacing: inherit;
     font-weight: inherit;
 }
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+i.icon-aron:before {
+    content: "\e900";
+}
+
+i.icon-arrow-left:before {
+    content: "\e901";
+}
+
+i.icon-arrow-right:before {
+    content: "\e902";
+}
+
+i.icon-chevron-right:before {
+    content: "\e906";
+}
+
+i.icon-plus:before {
+    content: "\e90c";
+}
+
+i.icon-lock:before {
+    content: "\e912";
+}
+
+i.icon-search:before {
+    content: "\e90e";
+}
+
+i.icon-spinwheel:before {
+    content: "\e90f";
+}
+
+i.icon-user:before {
+    content: "\e910";
+}
+
+i.icon-lock-stroke:before {
+    content: "\e913";
+}
+
+.page {
+    box-shadow: 0px 12px 24px rgba(181, 181, 181, 0.25);
+    &__container {
+        margin: 0 auto;
+        min-height: calc(100vh - 200px);
+    }
+    
+    @media only screen and (max-width: 767px) {
+        overflow: hidden;
+        border-radius: 20px;
+        &__container {
+            overflow-y: auto;
+            height: calc(100vh - 72px);
+        }
+    }
+}
+

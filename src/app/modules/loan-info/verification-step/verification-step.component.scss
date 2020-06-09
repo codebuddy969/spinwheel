@@ -1,0 +1,109 @@
+@import "~src/variables";
+
+.page {
+    background-color: $color-secondary;
+    &__container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.spinner {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    margin: 0 auto;
+    img {
+        max-width: 100%;
+        max-height: 270px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.info {
+    padding: 20px 15px;
+    max-width: 320px;
+    margin: 0 auto
+}
+
+.loader {
+    width: 62px;
+    display: flex;
+    margin: 32px auto 37px;
+    justify-content: space-between;
+    span {
+        width: 6px;
+        height: 6px;
+        display: block;
+        border-radius: 50%;
+        background: rgba(246, 246, 250, 0.4);
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        &:nth-child(1) {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+        &:nth-child(2) {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+    }
+}
+
+h1 {
+    color: #F6F6FA;
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.01em;
+    font-family: "Synthese", sans-serif;
+}
+
+p {
+    color: #FBFBFB;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    font-family: "Synthese", sans-serif;
+}
+
+:host ::ng-deep {
+    app-logo {
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        span {
+            margin-right: 20px;
+            transform: rotate(44.99deg);
+            background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.87) 0deg, rgba(255, 255, 255, 0) 360deg);
+        }
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    } 40% {
+          -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+      }
+}
+
+@media only screen and (min-width: 768px) {
+    .spinner {
+        margin: 0 auto;
+    }
+    .info {
+        max-width: 380px;
+    }
+    p {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}

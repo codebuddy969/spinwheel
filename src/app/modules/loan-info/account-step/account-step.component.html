@@ -1,0 +1,59 @@
+<div class="page">
+    <div class="page__container">
+        <div class="page__header" *appMedia="'small'">
+            <h1>
+                <button (click)="navService.Back()">
+                    <i class="icon-arrow-right"></i>
+                </button>
+                We ready to GO!
+            </h1>
+        </div>
+        <div class="page__info">
+            <div class="image">
+                <img src="/assets/icons/firstmark-services.svg" alt="firstmark-logo" *appMedia="'small'">
+            </div>
+            <div class="headline">
+                <span>Step 2 of 3</span>
+                <h2>Enter your loan information</h2>
+            </div>
+            <div class="form">
+                <app-form>
+                    <img src="/assets/icons/firstmark-services.svg" alt="firstmark-logo" *appMedia="'large'">
+                    <app-account-number></app-account-number>
+                    <div class="slider">
+                        <div class="slider__header">
+                            <h2>Loan Balance:</h2>
+                            <span>$ 37 000</span>
+                        </div>
+                        <p-slider></p-slider>
+                        <div class="slider__output">
+                            <span>$0</span>
+                            <span>$500</span>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="slider__header">
+                            <h2>Interest Rate:</h2>
+                            <span>% 6.7</span>
+                        </div>
+                        <p-slider></p-slider>
+                        <div class="slider__output">
+                            <span>%0</span>
+                            <span>%100</span>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <h3>$ 250</h3>
+                        <span>Monthly Payment</span>
+                    </div>
+                    <app-btn-primary icon="icon-arrow-left" link="/loan-info/verification" *appMedia="'large'">
+                        Create Loan
+                    </app-btn-primary>
+                </app-form>
+            </div>
+        </div>
+    </div>
+    <div class="continue" *appMedia="'small'">
+        <app-btn-primary icon="icon-arrow-left" link="/loan-info/verification">Create Loan</app-btn-primary>
+    </div>
+</div>

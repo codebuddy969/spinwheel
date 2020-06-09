@@ -1,0 +1,23 @@
+<div class="chart">
+    <div class="vertical">
+        <span *ngFor='let key of amount | numIterator'>{{key}}k</span>
+    </div>
+    <div class="graphic">
+        <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="draw" #chart>
+            <div class="principal"></div>
+            <div class="interest"></div>
+        </div>
+    </div>
+    <div class="horizontal">
+        <div *ngFor='let key of years | yearsIterator'>{{key}} <div>yrs</div></div>
+    </div>
+</div>
+
+<a href="#">Learn How To Get Out of Debt Faster <i class="icon-chevron-right"></i></a>

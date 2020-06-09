@@ -1,0 +1,60 @@
+<div class="page">
+    <div class="notification" *appMedia="'large'">
+        <div>
+            <span>The CARES Act provides repayment relief for loans owned by the U.S. Department of Education. Go to Federal Student Aid’s coronavirus (COVID-19)</span>
+            <a href="#">read more</a>
+        </div>
+    </div>
+    <div class="page__container">
+        <div class="header">
+            <div class="header__container">
+                <h1><span>Welcome back</span> Irma Jones!</h1>
+                <div class="header__user">
+                    <img src="/assets/img/main/user.png" alt="user">
+                </div>
+            </div>
+        </div>
+        <div class="page__info">
+            <div class="card">
+                <div class="card-chart">
+                    <h2>Your status</h2>
+                    <app-plain-donut [data]="data"></app-plain-donut>
+                </div>
+            </div>
+            <div class="recommendations">
+                <h3>Recommendations</h3>
+                <div class="slider">
+                    <p-carousel [value]="items" numVisible="1" (onPage)="setPage()">
+                        <ng-template let-item pTemplate="item">
+                            <a href="#">
+                                <img src="/assets/img/main/{{item.icon}}.svg" alt="icon-spinwheel">
+                                <span>{{item.value}}</span>
+                                <i class="icon-chevron-right"></i>
+                            </a>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-chart">
+                    <h2>Your Progress</h2>
+                    <app-progress-chart [total]="42000" [paid]="4000"></app-progress-chart>
+                    <div class="card-separator"></div>
+                    <app-progress-donut [principal]="4650" [interest]="1200"></app-progress-donut>
+                </div>
+            </div>
+            <div class="cares-act">
+                <p>The CARES Act provides repayment relief for loans owned by the U.S. Department of Education. Go to Federal Student Aid’s coronavirus <strong>(COVID-19)</strong></p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="card">
+                <div class="card-chart">
+                    <h2>Your projections</h2>
+                    <h3>Based on this you will be debt free in 25 yrs</h3>
+                    <app-progress-donut [principal]="4650" [interest]="1200"></app-progress-donut>
+                    <app-projections-chart></app-projections-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="page">
+    <div class="page__container">
+        <div class="page__header">
+            <div>
+                <app-logo *appMedia="'small'"></app-logo>
+                <h1>Connect Loan</h1>
+                <p>Connect with your student loan servicer and we'll securely sync all your loan data.</p>
+            </div>
+        </div>
+        <div class="page__info">
+            <div class="card">
+                <h2><img src="/assets/icons/employee-card.svg" alt="employee-card">Summary</h2>
+                <h3>Connecting with your servicer will pull in the following:</h3>
+                <ul>
+                    <li>School name</li>
+                    <li>Loan category (subsidized, unsubsidized)</li>
+                    <li>Loan status history</li>
+                    <li>Interest rates for each of your loans</li>
+                    <li>Outstanding loan balances</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2><span>?</span> FAQs</h2>
+                <h3>How do you connect with my servicer?</h3>
+                <p>We use Plaid, a service that securely connects with loan servicer. All data is encrypted using bank-level encyryption.</p>
+            </div>
+            <div class="card">
+                <h2><span><i class="icon-lock"></i></span> Privacy</h2>
+                <h3>How do you connect with my servicer?</h3>
+                <p>We use Plaid, a service that securely connects with loan servicer. All data is encrypted using bank-level encyryption.</p>
+            </div>
+        </div>
+        <div class="page__continue" *appMedia="'large'">
+            <app-btn-primary icon="icon-arrow-left" link="/select-loan">Continue</app-btn-primary>
+        </div>
+    </div>
+    <div class="page__continue" *appMedia="'small'">
+        <app-btn-primary icon="icon-arrow-left" link="/select-loan">Continue</app-btn-primary>
+    </div>
+</div>

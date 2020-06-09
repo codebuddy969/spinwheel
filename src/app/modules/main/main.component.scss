@@ -1,0 +1,259 @@
+@import "~src/variables";
+
+.page {
+    background: #F6F6FA;
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1120px;
+        min-height: 100vh;
+    }
+}
+
+.notification {
+    padding: 17px 15px 15px;
+    background-color: #AFAFE9;
+    div {
+        width: 100%;
+        color: #ffffff;
+        margin: 0 auto;
+        max-width: 1120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    span {
+        color: inherit;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: "Synthese", sans-serif;
+    }
+    a {
+        color: inherit;
+        min-width: 80px;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: right;
+        letter-spacing: -0.015em;
+        text-decoration: underline;
+    }
+}
+
+.card {
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #EFEFF6;
+    box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+    h2 {
+        color: #000000;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0 13px;
+        text-transform: uppercase;
+        font-family: "Synthese", sans-serif;
+    }
+    h3 {
+        color: #5F5F5F;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 8px 13px 0;
+        letter-spacing: -0.015em;
+        font-family: "Synthese", sans-serif;
+    }
+}
+
+.card-chart {
+    padding: 25px 10px 0 5px;
+}
+
+.card-separator {
+    height: 1px;
+    margin: 6px 0;
+    background: #F6F6FA;
+}
+
+.cares-act {
+    margin: 16px 0;
+    border-radius: 8px;
+    background-size: cover;
+    padding: 24px 20px 18px;
+    background-image: url('/assets/img/main/cares-act.png');
+    box-shadow: 0px 6px 12px rgba(104, 72, 226, 0.24);
+    p {
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    strong {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    a {
+        width: 97px;
+        height: 24px;
+        color: #3B3B3B;
+        font-size: 12px;
+        line-height: 14px;
+        border-radius: 4px;
+        background: #FFFFFF;
+        margin-top: 18px;
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Synthese", sans-serif;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        color: #000000;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        align-items: center;
+        font-family: "Synthese", sans-serif;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .page {
+        &__info {
+            z-index: 1;
+            max-width: 358px;
+            margin: -100px auto 20px;
+            padding: 0 15px;
+            position: relative;
+        }
+    }
+    .header {
+        z-index: 0;
+        min-height: 220px;
+        overflow: hidden;
+        position: relative;
+        padding-top: 23px;
+        display: flex;
+        justify-content: center;
+        &__container {
+            width: 100%;
+            padding: 0 12px 0 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__user {
+            padding: 19px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("/assets/img/main/user-circle.svg");
+        }
+        h1 {
+            color: #FBFBFB;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            padding-top: 15px;
+            font-family: "Synthese", sans-serif;
+        }
+        span {
+            display: block;
+            color: #FBFBFB;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            letter-spacing: -0.015em;
+        }
+        &:after {
+            z-index: -1;
+            content: "";
+            top: -55px;
+            width: 140%;
+            height: 125%;
+            border-radius: 50%;
+            position: absolute;
+            background: linear-gradient(137.58deg, #A073ED 21.34%, #6848E2 98.68%);
+        }
+    }
+    .recommendations {
+        padding-top: 16px;
+        h3 {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Synthese", sans-serif;
+        }
+    }
+    .slider {
+        padding-top: 12px;
+    }
+    :host ::ng-deep {
+        .ui-carousel-item {
+            a {
+                height: 88px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                background: #FFFFFF;
+                position: relative;
+                border: 1px solid #EFEFF6;
+                box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+            }
+            span {
+                max-width: 58%;
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: bold;
+                letter-spacing: -0.015em;
+                margin-left: 20px;
+            }
+            i {
+                right: 10px;
+                font-size: 14px;
+                position: absolute;
+                color: $color-secondary;
+            }
+        }
+        .ui-carousel-prev,
+        .ui-carousel-next {
+            display: none;
+        }
+        .ui-carousel-dots-container {
+            margin-top: 14px;
+            margin-bottom: 16px;
+        }
+        .ui-carousel-dot-item {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            button {
+                width: 6px;
+                height: 6px;
+                cursor: pointer;
+                border-radius: 50%;
+                background: rgb(95, 95, 95, 0.5);
+            }
+        }
+        .ui-state-highlight {
+            button {
+                width: 12px;
+                height: 12px;
+                background: $color-secondary;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        &:before {
+            top: 0;
+            z-index: 1;
+            position: absolute;
+            content: url("/assets/img/main/header-circles.svg");
+        }
+    }
+}

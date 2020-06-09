@@ -1,0 +1,24 @@
+<div class="chart">
+    <div style="width: 124px;">
+        <svg #donut viewBox="0 0 360 360">
+            <text class="header" x="50%" y="31%" text-anchor="middle">you owe</text>
+            <text class="amount" x="50%" y="53%" text-anchor="middle">${{totalAmount.toLocaleString()}}</text>
+            <text class="footer" x="50%" y="68%" text-anchor="middle">across {{data.length}}</text>
+            <text class="footer" x="50%" y="75%" text-anchor="middle">loans</text>
+        </svg>
+    </div>
+
+    <div class="card-rate">
+        <h3>6.7%</h3>
+        <span>Blended Interest Rate</span>
+    </div>
+</div>
+
+<div class="loaners">
+    <div *ngFor="let item of data">
+        <span [style.background-color]="item.color"></span>
+        <p>{{item.name}}</p>
+    </div>
+</div>
+
+<a href="#">Find out which loans to pay first <i class="icon-chevron-right"></i></a>

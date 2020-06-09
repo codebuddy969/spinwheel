@@ -1,0 +1,153 @@
+@import "~src/variables";
+
+.page {
+    background-color: $color-secondary;
+    &__cover {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        button {
+            top: 40px;
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 50%;
+            position: absolute;
+            color: $color-secondary;
+            background-color: #ffffff;
+            font-family: "Synthese", sans-serif;
+        }
+    }
+    &__info {
+        color: #FBFBFB;
+        h1 {
+            color: #FFFFFF;
+            font-weight: bold;
+            font-family: "Synthese", sans-serif;
+        }
+        i {
+            color: inherit;
+            margin-right: 13px;
+        }
+        p {
+            padding-top: 18px;
+        }
+        button {
+            width: 181px;
+            height: 42px;
+            color: inherit;
+            font-size: 12px;
+            line-height: 22px;
+            background: #866DE8;
+            border-radius: 21px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    @media only screen and (min-width: 1199px) {
+        &__cover {
+            width: calc(100% - 490px);
+        }
+        &__info {
+            max-width: 490px;
+            padding: 30px 100px 0 15px;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        &__container {
+            display: flex;
+            margin: 0 auto;
+            justify-content: flex-end;
+        }
+        &__info {
+            max-width: 400px;
+            padding: 30px 15px 0 15px;
+            text-align: left;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 37px;
+                line-height: 46px;
+            }
+            p {
+                max-width: 300px;
+            }
+            button {
+                margin-top: 30px;
+            }
+            &::ng-deep app-logo {
+                top: 32px;
+                left: 21px;
+                position: absolute;
+                justify-content: flex-start;
+                span {
+                    margin-right: 15px;
+                    background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.87) 0deg, rgba(255, 255, 255, 0) 360deg);
+                }
+            }
+        }
+        &__cover {
+            height: 100vh;
+            width: calc(100% - 400px);
+            background-position: right top;
+            background-image: url("/assets/img/home/people-md.jpg");
+        }
+        &__continue {
+            max-width: 300px;
+            border-radius: 8px;
+            margin-top: 55px;
+            overflow: hidden;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        &__info {
+            text-align: center;
+            padding: 12px 15px 30px;
+            h1 {
+                font-size: 30px;
+                line-height: 45px;
+                padding-top: 18px;
+            }
+            >span {
+                display: block;
+                padding-top: 18px;
+            }
+            button {
+                margin: 25px auto 0;
+            }
+        }
+        &__cover {
+            height: proportions(0,800,768);
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            align-items: flex-start;
+            justify-content: center;
+            background-image: url("/assets/img/home/people-lg.jpg");
+        }
+    }
+    @media only screen and (max-width: 375px) {
+        &__cover {
+            height: 388px;
+            background-image: url("/assets/img/home/people-xs.png");
+        }
+        &__container {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 130%;
+            background-image: url(/assets/img/home/circles.svg);
+        }
+        &__info {
+            p {
+                margin: 0 auto;
+                max-width: 240px;
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?xly99s');
-  src:  url('fonts/icomoon.eot?xly99s#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?xly99s') format('truetype'),
-    url('fonts/icomoon.woff?xly99s') format('woff'),
-    url('fonts/icomoon.svg?xly99s#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?bvc8ab');
+  src:  url('fonts/icomoon.eot?bvc8ab#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bvc8ab') format('truetype'),
+    url('fonts/icomoon.woff?bvc8ab') format('woff'),
+    url('fonts/icomoon.svg?bvc8ab#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -82,4 +82,7 @@
 .icon-lock:before {
   content: "\e912";
   color: #fff;
+}
+.icon-lock-stroke:before {
+  content: "\e913";
 }

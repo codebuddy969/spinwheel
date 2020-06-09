@@ -1,0 +1,17 @@
+<div class="page">
+    <div class="page__container">
+        <app-logo *appMedia="'large'"></app-logo>
+        <div class="spinner">
+            <img src="/assets/img/loan-info/{{created ? 'created.svg' : 'spinner.png'}}" alt="spinner">
+        </div>
+        <div class="info">
+            <h1>{{message}}</h1>
+            <div class="loader" *ngIf="!created">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p *ngIf="!created">This can take a few seconds... Please do not refresh the page.</p>
+        </div>
+    </div>
+</div>
