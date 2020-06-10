@@ -1,0 +1,84 @@
+@import "~src/variables";
+
+.card {
+    height: 192px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 12px 24px rgba(215, 215, 234, 0.71);
+    background: linear-gradient(145.98deg, #F39369 26.74%, #F3C57A 160.76%);
+    &:before {
+        content: "";
+        width: 221px;
+        height: 110px;
+        opacity: 0.2;
+        display: block;
+        border: 1px dashed #FFFFFF;
+    }
+    &:after {
+        content: "";
+        width: 181px;
+        height: 181px;
+        opacity: 0.32;
+        display: block;
+        background: conic-gradient(from 180deg at 50% 50%, #FFFFFF 0deg, rgba(255, 255, 255, 0.45) 360deg);
+    }
+}
+
+:host ::ng-deep {
+    .ui-carousel-item {
+        a {
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #FFFFFF;
+            position: relative;
+            border: 1px solid #EFEFF6;
+            box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+        }
+        span {
+            max-width: 58%;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: bold;
+            letter-spacing: -0.015em;
+            margin-left: 20px;
+        }
+        i {
+            right: 10px;
+            font-size: 14px;
+            position: absolute;
+            color: $color-secondary;
+        }
+    }
+    .ui-carousel-prev,
+    .ui-carousel-next {
+        display: none;
+    }
+    .ui-carousel-dots-container {
+        margin-top: 14px;
+        margin-bottom: 16px;
+    }
+    .ui-carousel-dot-item {
+        padding: 0 6px;
+        display: flex;
+        align-items: center;
+        button {
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            border-radius: 50%;
+            background: rgb(95, 95, 95, 0.5);
+        }
+    }
+    .ui-state-highlight {
+        button {
+            width: 4px;
+            height: 4px;
+            background: transparent;
+            box-sizing: content-box;
+            border: 4px solid #333333;
+        }
+    }
+}

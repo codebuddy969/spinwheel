@@ -1,0 +1,16 @@
+<app-page link="/point-source" header="Choose Point Source" button="Configurate Payment" icon="icon-chevron-left">
+    <div class="slider">
+        <p-carousel [value]="items" numVisible="1" (onPage)="setPage()">
+            <ng-template let-item pTemplate="item">
+                <div class="card">
+
+                </div>
+                <a href="#">
+                    <img src="/assets/img/main/{{item.icon}}.svg" alt="icon-spinwheel">
+                    <span>{{item.value}}</span>
+                    <i class="icon-chevron-right"></i>
+                </a>
+            </ng-template>
+        </p-carousel>
+    </div>
+</app-page>

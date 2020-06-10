@@ -38,6 +38,11 @@ const routes: Routes = [
             import('./modules/set-goal/set-goal.module').then((m) => m.SetGoalModule),
     },
     {
+        path: 'point-source',
+        loadChildren: () =>
+            import('./modules/point-source/point-source.module').then((m) => m.PointSourceModule),
+    },
+    {
         path: '**',
         redirectTo: '/',
     },

@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ExtraPaymentSliderComponent implements OnInit {
 
+    amount = 100;
+
     constructor() {
     }
 

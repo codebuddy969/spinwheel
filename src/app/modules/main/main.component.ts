@@ -42,7 +42,7 @@ export class MainComponent implements OnInit {
         }
     ];
 
-    public items: any[] = [{
+    items: any[] = [{
         id: 1,
         icon: 'screen-icon',
         value: 'Pay off the right loans'

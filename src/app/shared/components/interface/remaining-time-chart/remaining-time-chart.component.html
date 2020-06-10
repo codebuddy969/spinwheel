@@ -1,1 +1,15 @@
-<p>remaining-time-chart works!</p>
+<div class="container">
+    <div class="info">
+        <h2>Total Time Remaining</h2>
+        <div class="data">
+            <div class="block">Current<strong>${{current.toLocaleString()}}</strong></div>
+            <div class="block">W/Spinwheel<strong>${{saved.toLocaleString()}}</strong></div>
+            <div class="block">Diff<strong>${{(current - saved).toLocaleString()}}</strong></div>
+        </div>
+    </div>
+    <div class="chart">
+        <svg #donut viewBox="0 0 360 360">
+            <text x="50%" y="57%" text-anchor="middle">{{percentage}}%</text>
+        </svg>
+    </div>
+</div>

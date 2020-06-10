@@ -1,5 +1,5 @@
-<div>
+<div class="container">
     <div class="title">Extra Monthly Payment <span>*Choose this or Years</span></div>
-    <div class="amount">$100</div>
+    <div class="amount">${{amount}}</div>
 </div>
-<p-slider></p-slider>
+<p-slider [(ngModel)]="amount" [min]="0" [max]="1000"></p-slider>
