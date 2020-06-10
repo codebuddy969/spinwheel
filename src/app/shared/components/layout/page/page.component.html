@@ -1,0 +1,19 @@
+<div class="page">
+    <div class="page__container">
+        <div class="content">
+            <h1 class="header">
+                <i class="{{icon}}" *appMedia="'small'" (click)="navService.Back()"></i>
+                {{header}}
+            </h1>
+            <div class="info">
+                <ng-content></ng-content>
+                <div class="continue" *appMedia="'large'">
+                    <app-btn-secondary [link]="link">{{button}}</app-btn-secondary>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__continue" *appMedia="'small'">
+        <app-btn-secondary [link]="link">{{button}}</app-btn-secondary>
+    </div>
+</div>

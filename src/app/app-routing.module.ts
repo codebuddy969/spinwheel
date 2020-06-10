@@ -28,6 +28,16 @@ const routes: Routes = [
             import('./modules/main/main.module').then((m) => m.MainModule),
     },
     {
+        path: 'more-info',
+        loadChildren: () =>
+            import('./modules/more-info/more-info.module').then((m) => m.MoreInfoModule),
+    },
+    {
+        path: 'set-goal',
+        loadChildren: () =>
+            import('./modules/set-goal/set-goal.module').then((m) => m.SetGoalModule),
+    },
+    {
         path: '**',
         redirectTo: '/',
     },

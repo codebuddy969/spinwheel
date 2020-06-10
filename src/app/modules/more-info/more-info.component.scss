@@ -1,0 +1,48 @@
+.label {
+    color: #000000;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    letter-spacing: -0.015em;
+}
+.logo {
+    img {
+        width: 279px;
+        margin-top: 4px;
+    }
+}
+.notification {
+    padding-top: 15px;
+    h2 {
+        font-size: 24px;
+        line-height: 29px;
+        padding-top: 2px;
+        font-weight: bold;
+        letter-spacing: -0.01em;
+        font-family: "Synthese", sans-serif;
+    }
+}
+.container {
+    padding-top: 27px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    width: 100%;
+    max-width: 143px;
+    margin-bottom: 32px;
+    h3 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+        padding-top: 10px;
+        letter-spacing: -0.01em;
+        font-family: "Synthese", sans-serif;
+    }
+    span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: normal;
+    }
+}

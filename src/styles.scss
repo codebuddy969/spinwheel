@@ -1,4 +1,5 @@
-@import '~primeng/resources/primeng.min.css';
+@import '~primeng/resources/components/slider/slider.css';
+@import '~primeng/resources/components/carousel/carousel.css';
 
 @mixin fontface($name, $file, $weight: normal, $style: normal){
     @font-face {
@@ -62,44 +63,60 @@ span {
     -moz-osx-font-smoothing: grayscale;
 }
 
-i.icon-aron:before {
+.icon-aron:before {
     content: "\e900";
 }
 
-i.icon-arrow-left:before {
+.icon-arrow-left:before {
     content: "\e901";
 }
 
-i.icon-arrow-right:before {
+.icon-arrow-right:before {
     content: "\e902";
 }
 
-i.icon-chevron-right:before {
+.icon-chevron-left:before {
+    content: "\e905";
+}
+
+.icon-chevron-right:before {
     content: "\e906";
 }
 
-i.icon-plus:before {
+.icon-cross:before {
+    content: "\e907";
+}
+
+.icon-plus:before {
     content: "\e90c";
 }
 
-i.icon-lock:before {
+.icon-lock:before {
     content: "\e912";
 }
 
-i.icon-search:before {
+.icon-search:before {
     content: "\e90e";
 }
 
-i.icon-spinwheel:before {
+.icon-spinwheel:before {
     content: "\e90f";
 }
 
-i.icon-user:before {
+.icon-user:before {
     content: "\e910";
 }
 
-i.icon-lock-stroke:before {
+.icon-lock-stroke:before {
     content: "\e913";
+}
+
+.icon-cog:before {
+    content: "\e914";
+}
+
+.icon-logout:before {
+    content: "\e915";
 }
 
 .page {
@@ -118,4 +135,3 @@ i.icon-lock-stroke:before {
         }
     }
 }
-

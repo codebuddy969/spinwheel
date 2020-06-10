@@ -1,0 +1,29 @@
+<app-page link="/set-goal" header="Info" button="Create Personalized Plan" icon="icon-cross">
+    <div class="logo">
+        <div class="label">Loan service</div>
+        <img src="/assets/icons/firstmark-services.svg" alt="firstmark-logo">
+    </div>
+    <div class="notification">
+        <div class="label">You’ll now pay</div>
+        <h2>$250.22/mo for 5 years</h2>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="label">Interest Rate</div>
+            <h3>6.7 %</h3>
+        </div>
+        <div class="card">
+            <div class="label">Total Principle Pay</div>
+            <h3>$ 37,000.00</h3>
+        </div>
+        <div class="card">
+            <div class="label">Total Interest Paid</div>
+            <h3>$ 592.00</h3>
+        </div>
+        <div class="card">
+            <div class="label">Minimum Payment</div>
+            <h3>$ 48.22/<span>mo for 10 y</span></h3>
+        </div>
+    </div>
+    <app-debt-free-chart [total]="42000" [paid]="4000"></app-debt-free-chart>
+</app-page>

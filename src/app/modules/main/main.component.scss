@@ -6,7 +6,6 @@
         width: 100%;
         margin: 0 auto;
         max-width: 1120px;
-        min-height: 100vh;
     }
 }
 
@@ -45,6 +44,14 @@
     box-sizing: border-box;
     border: 1px solid #EFEFF6;
     box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+    &__chart {
+        padding: 25px 10px 0 5px;
+    }
+    &__separator {
+        height: 1px;
+        margin: 6px 0;
+        background: #F6F6FA;
+    }
     h2 {
         color: #000000;
         font-weight: bold;
@@ -58,20 +65,10 @@
         color: #5F5F5F;
         font-size: 13px;
         line-height: 16px;
-        padding: 8px 13px 0;
+        padding: 8px 13px;
         letter-spacing: -0.015em;
         font-family: "Synthese", sans-serif;
     }
-}
-
-.card-chart {
-    padding: 25px 10px 0 5px;
-}
-
-.card-separator {
-    height: 1px;
-    margin: 6px 0;
-    background: #F6F6FA;
 }
 
 .cares-act {
@@ -81,14 +78,14 @@
     padding: 24px 20px 18px;
     background-image: url('/assets/img/main/cares-act.png');
     box-shadow: 0px 6px 12px rgba(104, 72, 226, 0.24);
+    strong {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
     p {
         color: #FFFFFF;
         font-size: 14px;
         line-height: 17px;
-    }
-    strong {
-        color: #FFFFFF;
-        font-weight: bold;
     }
     a {
         width: 97px;
@@ -108,24 +105,40 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .page {
+        &__container {
+            padding: 0 15px;
+        }
+    }
     .header {
-        color: #000000;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        align-items: center;
-        font-family: "Synthese", sans-serif;
+        &__container {
+            padding-top: 25px;
+        }
+        h1, span {
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: bold;
+            font-family: "Synthese", sans-serif;
+        }
+    }
+    .info {
+        margin: 0 auto;
+        max-width: 740px;
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        margin-bottom: 16px;
+        width: calc(50% - 8px);
     }
 }
+
 @media only screen and (max-width: 767px) {
     .page {
-        &__info {
-            z-index: 1;
-            max-width: 358px;
-            margin: -100px auto 20px;
-            padding: 0 15px;
-            position: relative;
+        &__container {
+            min-height: 100vh;
         }
     }
     .header {
@@ -148,6 +161,16 @@
             background-repeat: no-repeat;
             background-image: url("/assets/img/main/user-circle.svg");
         }
+        &:after {
+            z-index: -1;
+            content: "";
+            top: -55px;
+            width: 140%;
+            height: 125%;
+            border-radius: 50%;
+            position: absolute;
+            background: linear-gradient(137.58deg, #A073ED 21.34%, #6848E2 98.68%);
+        }
         h1 {
             color: #FBFBFB;
             font-weight: bold;
@@ -164,16 +187,13 @@
             font-weight: 400;
             letter-spacing: -0.015em;
         }
-        &:after {
-            z-index: -1;
-            content: "";
-            top: -55px;
-            width: 140%;
-            height: 125%;
-            border-radius: 50%;
-            position: absolute;
-            background: linear-gradient(137.58deg, #A073ED 21.34%, #6848E2 98.68%);
-        }
+    }
+    .info {
+        z-index: 1;
+        max-width: 358px;
+        margin: -100px auto 20px;
+        padding: 0 15px;
+        position: relative;
     }
     .recommendations {
         padding-top: 16px;

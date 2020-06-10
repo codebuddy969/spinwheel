@@ -3,3 +3,8 @@ export * from './plain-donut';
 export * from './progress-chart';
 export * from './progress-donut';
 export * from './projections-chart';
+export * from './nav-menu';
+export * from './debt-free-chart';
+export * from './extra-payment-slider';
+export * from './pay-amount-chart';
+export * from './remaining-time-chart';

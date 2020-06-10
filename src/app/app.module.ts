@@ -1,5 +1,6 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 
@@ -13,6 +14,7 @@ import {SharedModule} from '@app/shared';
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
+        NoopAnimationsModule,
         AppRoutingModule,
         CoreModule,
         SharedModule

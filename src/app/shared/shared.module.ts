@@ -17,11 +17,20 @@ import {
     PlainDonutComponent,
     ProgressChartComponent,
     ProgressDonutComponent,
-    ProjectionsChartComponent
+    ProjectionsChartComponent,
+    NavMenuComponent,
+    DebtFreeChartComponent,
+    PageComponent,
+    ExtraPaymentSliderComponent,
+    PayAmountChartComponent,
+    RemainingTimeChartComponent
 } from './components';
 
 import {MediaDirective} from './directives';
 import {NumIteratorPipe, YearsIteratorPipe} from './pipes';
+
+import {SliderModule} from 'primeng/slider';
+import {SplitButtonModule} from 'primeng/splitbutton';
 
 @NgModule({
     declarations: [
@@ -42,13 +51,21 @@ import {NumIteratorPipe, YearsIteratorPipe} from './pipes';
         ProgressDonutComponent,
         ProjectionsChartComponent,
         NumIteratorPipe,
-        YearsIteratorPipe
+        YearsIteratorPipe,
+        NavMenuComponent,
+        DebtFreeChartComponent,
+        PageComponent,
+        ExtraPaymentSliderComponent,
+        PayAmountChartComponent,
+        RemainingTimeChartComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SplitButtonModule,
+        SliderModule
     ],
     exports: [
         LogoComponent,
@@ -68,7 +85,13 @@ import {NumIteratorPipe, YearsIteratorPipe} from './pipes';
         ProgressDonutComponent,
         ProjectionsChartComponent,
         NumIteratorPipe,
-        YearsIteratorPipe
+        YearsIteratorPipe,
+        NavMenuComponent,
+        DebtFreeChartComponent,
+        PageComponent,
+        ExtraPaymentSliderComponent,
+        PayAmountChartComponent,
+        RemainingTimeChartComponent
     ]
 })
 export class SharedModule {

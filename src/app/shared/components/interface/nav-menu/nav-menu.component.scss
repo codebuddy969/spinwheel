@@ -1,0 +1,93 @@
+:host {
+    width: 100%;
+    max-width: 340px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+    ::ng-deep {
+        .ui-button {
+            background-color: transparent;
+            .ui-button-text {
+                margin: 0 16px;
+            }
+        }
+        .ui-splitbutton {
+            display: flex;
+            position: relative;
+        }
+        .ui-splitbutton-menubutton {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .ui-button-text {
+                display: none;
+            }
+        }
+        .ui-button-icon-left {
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 11px;
+            padding: 3px;
+            margin-top: -5px;
+            border: solid white;
+            display: inline-block;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .ui-button-text,
+        .ui-menuitem-text{
+            color: #F0F0F0;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: bold;
+            margin-left: 15px;
+            letter-spacing: -0.015em;
+            font-family: "Karla", sans-serif;
+        }
+        .ui-menuitem-text{
+            color: #000000;
+            line-height: 30px;
+        }
+        .ui-menu {
+            top: 30px !important;
+            width: 100%;
+            padding: 10px;
+            position: absolute;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .ui-menuitem-link {
+            display: block;
+        }
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+a {
+    color: #F0F0F0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    letter-spacing: -0.015em;
+}
