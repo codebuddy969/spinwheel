@@ -148,6 +148,14 @@ span {
     content: "\e919";
 }
 
+.icon-email-stroke:before {
+    content: "\e91a";
+}
+
+.icon-handset:before {
+    content: "\e91b";
+}
+
 .page {
     box-shadow: 0px 12px 24px rgba(181, 181, 181, 0.25);
     &__container {

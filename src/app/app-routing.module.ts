@@ -53,6 +53,16 @@ const routes: Routes = [
             import('./modules/goals-plan/goals-plan.module').then((m) => m.GoalsPlanModule),
     },
     {
+        path: 'invite-champions',
+        loadChildren: () =>
+            import('./modules/invite-champs/invite-champs.module').then((m) => m.InviteChampsModule),
+    },
+    {
+        path: 'congratulations',
+        loadChildren: () =>
+            import('./modules/congrats/congrats.module').then((m) => m.CongratsModule),
+    },
+    {
         path: '**',
         redirectTo: '/',
     },

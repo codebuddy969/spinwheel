@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?kuuue1');
-  src:  url('fonts/icomoon.eot?kuuue1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?kuuue1') format('truetype'),
-    url('fonts/icomoon.woff?kuuue1') format('woff'),
-    url('fonts/icomoon.svg?kuuue1#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?iw9rb2');
+  src:  url('fonts/icomoon.eot?iw9rb2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?iw9rb2') format('truetype'),
+    url('fonts/icomoon.woff?iw9rb2') format('woff'),
+    url('fonts/icomoon.svg?iw9rb2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -102,4 +102,11 @@
 }
 .icon-check-fat:before {
   content: "\e919";
+}
+.icon-email-stroke:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-handset:before {
+  content: "\e91b";
 }
