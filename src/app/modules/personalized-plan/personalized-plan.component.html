@@ -1,0 +1,43 @@
+<app-page link="/goals-plan"
+          header="Personalized Savings Plan"
+          subheader="You can customize using the options below"
+          button="Configurate Payment"
+          icon="icon-chevron-left">
+    <app-amount-slider title="Reward Points" [max]="9999" [amount]="4400"></app-amount-slider>
+    <div class="champions">
+        <h3>Number of Champions</h3>
+        <span>3</span>
+    </div>
+    <div class="switcher">
+        <div>Enable Round Up</div>
+        <p-inputSwitch [(ngModel)]="roundChecked"></p-inputSwitch>
+    </div>
+    <div class="switcher">
+        <div>Boost Payment</div>
+        <p-inputSwitch [(ngModel)]="paymentChecked"></p-inputSwitch>
+    </div>
+    <div class="header">
+        <div></div>
+        <div>Current</div>
+        <div>W/Spinwheel</div>
+        <div>Diff</div>
+    </div>
+    <div class="row">
+        <div>M/Payment</div>
+        <div>$250</div>
+        <div>$350</div>
+        <div>$100</div>
+    </div>
+    <div class="row">
+        <div>Total Amount Pay</div>
+        <div>$78,674</div>
+        <div>$39,853</div>
+        <div>$38,821</div>
+    </div>
+    <div class="row">
+        <div>Total Time Remaining</div>
+        <div>9,487</div>
+        <div>$350</div>
+        <div>$100</div>
+    </div>
+</app-page>

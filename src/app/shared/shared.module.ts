@@ -21,9 +21,9 @@ import {
     NavMenuComponent,
     DebtFreeChartComponent,
     PageComponent,
-    ExtraPaymentSliderComponent,
     PayAmountChartComponent,
-    RemainingTimeChartComponent
+    RemainingTimeChartComponent,
+    AmountSliderComponent
 } from './components';
 
 import {MediaDirective} from './directives';
@@ -55,9 +55,9 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         NavMenuComponent,
         DebtFreeChartComponent,
         PageComponent,
-        ExtraPaymentSliderComponent,
         PayAmountChartComponent,
-        RemainingTimeChartComponent
+        RemainingTimeChartComponent,
+        AmountSliderComponent
     ],
     imports: [
         CommonModule,
@@ -89,9 +89,9 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         NavMenuComponent,
         DebtFreeChartComponent,
         PageComponent,
-        ExtraPaymentSliderComponent,
         PayAmountChartComponent,
-        RemainingTimeChartComponent
+        RemainingTimeChartComponent,
+        AmountSliderComponent
     ]
 })
 export class SharedModule {

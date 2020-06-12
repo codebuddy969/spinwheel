@@ -1,64 +1,152 @@
 @import "~src/variables";
 
-.card {
+h2 {
+    padding-top: 30px;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Synthese", sans-serif;
+}
+
+h3 {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    i {
+        font-size: 10px;
+        padding-right: 6px;
+    }
+}
+
+.source {
     height: 192px;
     overflow: hidden;
     border-radius: 8px;
+    position: relative;
+    padding: 28px 24px;
     box-shadow: 0px 12px 24px rgba(215, 215, 234, 0.71);
     background: linear-gradient(145.98deg, #F39369 26.74%, #F3C57A 160.76%);
     &:before {
+        top: 0;
+        left: 0;
         content: "";
-        width: 221px;
-        height: 110px;
-        opacity: 0.2;
+        width: 100%;
+        height: 100%;
         display: block;
-        border: 1px dashed #FFFFFF;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-image: url("/assets/img/point-source/card-background.png");
     }
-    &:after {
-        content: "";
-        width: 181px;
-        height: 181px;
-        opacity: 0.32;
+    img {
         display: block;
-        background: conic-gradient(from 180deg at 50% 50%, #FFFFFF 0deg, rgba(255, 255, 255, 0.45) 360deg);
+        margin: 0 0 0 auto;
+    }
+    &__number {
+        color: #000000;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: bold;
+        padding-top: 42px;
+        display: flex;
+        align-items: center;
+        i {
+            color: #000000;
+            font-size: 7px;
+        }
+        span {
+            margin-left: 5px;
+        }
+    }
+    &__container {
+        max-width: 230px;
+        padding-top: 25px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        span {
+            font-size: 12px;
+            line-height: 22px;
+            letter-spacing: 0.085em;
+            text-transform: uppercase;
+            color: rgb(0, 0, 0, 0.5);
+        }
+        strong {
+            color: #333333;
+            display: block;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: bold;
+            letter-spacing: -0.015em;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    background: #FFFFFF;
+    margin-top: 15px;
+    min-height: 64px;
+    border: 1px solid #EFEFF6;
+    box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+    &__mark {
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135.03deg, #A073ED 21.34%, #6848E2 98.68%);
+        i {
+            color: #ffffff;
+            font-size: 12px;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 50px 12px 16px;
+        width: calc(100% - 72px);
+    }
+    &__block {
+        span {
+            font-size: 12px;
+            line-height: 22px;
+            letter-spacing: -0.015em;
+        }
+        strong {
+            display: block;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: bold;
+            align-items: center;
+            letter-spacing: -0.015em;
+            font-family: "Synthese", sans-serif;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
     }
 }
 
 :host ::ng-deep {
-    .ui-carousel-item {
-        a {
-            height: 88px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            background: #FFFFFF;
-            position: relative;
-            border: 1px solid #EFEFF6;
-            box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
-        }
-        span {
-            max-width: 58%;
-            font-size: 16px;
-            line-height: 22px;
-            font-weight: bold;
-            letter-spacing: -0.015em;
-            margin-left: 20px;
-        }
-        i {
-            right: 10px;
-            font-size: 14px;
-            position: absolute;
-            color: $color-secondary;
-        }
-    }
     .ui-carousel-prev,
     .ui-carousel-next {
         display: none;
     }
     .ui-carousel-dots-container {
-        margin-top: 14px;
-        margin-bottom: 16px;
+        margin-top: 45px;
     }
     .ui-carousel-dot-item {
         padding: 0 6px;

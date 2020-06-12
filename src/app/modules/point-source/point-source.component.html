@@ -1,16 +1,58 @@
-<app-page link="/point-source" header="Choose Point Source" button="Configurate Payment" icon="icon-chevron-left">
+<app-page link="/personalized-plan" header="Choose Point Source" button="Configurate Payment" icon="icon-chevron-left">
     <div class="slider">
         <p-carousel [value]="items" numVisible="1" (onPage)="setPage()">
             <ng-template let-item pTemplate="item">
-                <div class="card">
-
+                <div class="source">
+                    <img src="/assets/img/point-source/visa-logo.svg" alt="visa-logo">
+                    <div class="source__number">
+                        <i class="icon-stars"></i>
+                        <span>4532</span>
+                    </div>
+                    <div class="source__container">
+                        <div class="source__block">
+                            <span>Card Holder</span>
+                            <strong>John Smith</strong>
+                        </div>
+                        <div class="source__block">
+                            <span>Expires</span>
+                            <strong>09/20</strong>
+                        </div>
+                        <div class="source__block">
+                            <span>cvc</span>
+                            <strong>345</strong>
+                        </div>
+                    </div>
                 </div>
-                <a href="#">
-                    <img src="/assets/img/main/{{item.icon}}.svg" alt="icon-spinwheel">
-                    <span>{{item.value}}</span>
-                    <i class="icon-chevron-right"></i>
-                </a>
             </ng-template>
         </p-carousel>
+    </div>
+    <h2>Chase Sapphire Reserve</h2>
+    <h3><i class="icon-infinite"></i>Ultimate Rewards Points</h3>
+    <div class="card">
+        <img src="/assets/img/point-source/shield.svg" alt="shield-icon">
+        <div class="card__info">
+            <div class="card__block">
+                <strong>96,258</strong>
+                <span>points available</span>
+            </div>
+            <div class="card__block">
+                <strong>$774,35</strong>
+                <span>in cash</span>
+            </div>
+        </div>
+    </div>
+    <h2>Savings in student loan</h2>
+    <div class="card">
+        <div class="card__mark">
+            <i class="icon-check-fat"></i>
+        </div>
+        <div class="card__info">
+            <div class="card__block">
+                <strong>$1400</strong>
+            </div>
+            <div class="card__block">
+                <span>1 year and 4 months</span>
+            </div>
+        </div>
     </div>
 </app-page>

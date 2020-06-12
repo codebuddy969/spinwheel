@@ -1,5 +1,6 @@
 @import '~primeng/resources/components/slider/slider.css';
 @import '~primeng/resources/components/carousel/carousel.css';
+@import '~primeng/resources/components/inputswitch/inputswitch.css';
 
 @mixin fontface($name, $file, $weight: normal, $style: normal){
     @font-face {
@@ -91,6 +92,14 @@ span {
     content: "\e90c";
 }
 
+.icon-email:before {
+    content: "\e908";
+}
+
+.icon-pencil:before {
+    content: "\e909";
+}
+
 .icon-lock:before {
     content: "\e912";
 }
@@ -107,6 +116,10 @@ span {
     content: "\e910";
 }
 
+.icon-users:before {
+    content: "\e911";
+}
+
 .icon-lock-stroke:before {
     content: "\e913";
 }
@@ -117,6 +130,22 @@ span {
 
 .icon-logout:before {
     content: "\e915";
+}
+
+.icon-stars:before {
+    content: "\e916";
+}
+
+.icon-infinite:before {
+    content: "\e917";
+}
+
+.icon-cross-fat:before {
+    content: "\e918";
+}
+
+.icon-check-fat:before {
+    content: "\e919";
 }
 
 .page {

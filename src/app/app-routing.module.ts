@@ -43,6 +43,16 @@ const routes: Routes = [
             import('./modules/point-source/point-source.module').then((m) => m.PointSourceModule),
     },
     {
+        path: 'personalized-plan',
+        loadChildren: () =>
+            import('./modules/personalized-plan/personalized-plan.module').then((m) => m.PersonalizedPlanModule),
+    },
+    {
+        path: 'goals-plan',
+        loadChildren: () =>
+            import('./modules/goals-plan/goals-plan.module').then((m) => m.GoalsPlanModule),
+    },
+    {
         path: '**',
         redirectTo: '/',
     },

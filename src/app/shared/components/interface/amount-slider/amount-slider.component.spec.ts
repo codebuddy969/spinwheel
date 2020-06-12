@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExtraPaymentSliderComponent } from './extra-payment-slider.component';
+import { AmountSliderComponent } from './amount-slider.component';
 
-describe('ExtraPaymentSliderComponent', () => {
-  let component: ExtraPaymentSliderComponent;
-  let fixture: ComponentFixture<ExtraPaymentSliderComponent>;
+describe('AmountSliderComponent', () => {
+  let component: AmountSliderComponent;
+  let fixture: ComponentFixture<AmountSliderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExtraPaymentSliderComponent ]
+      declarations: [ AmountSliderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExtraPaymentSliderComponent);
+    fixture = TestBed.createComponent(AmountSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,129 @@
+.champions {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: bold;
+        letter-spacing: -0.015em;
+    }
+    span {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: right;
+        font-weight: bold;
+        letter-spacing: -0.01em;
+        font-family: "Synthese", sans-serif;
+    }
+}
+
+.switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #EFEFF6;
+    padding: 16px 42px 16px 16px;
+    box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+    div {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: bold;
+        letter-spacing: -0.015em;
+    }
+}
+
+.header {
+    display: flex;
+    padding: 11px 16px;
+    padding-top: 32px;
+    div {
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: bold;
+        letter-spacing: -0.015em;
+    }
+    :nth-child(1) {
+        width: 30%;
+        font-weight: normal;
+    }
+    :nth-child(2) {
+        width: 20%;
+    }
+    :nth-child(3) {
+        width: 30%;
+    }
+    :nth-child(4) {
+        width: 20%;
+    }
+}
+
+.row {
+    display: flex;
+    margin-top: 4px;
+    padding: 11px 16px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFF6;
+    box-shadow: 0px 2px 4px rgba(188, 189, 200, 0.16), 0px 8px 16px rgba(188, 189, 200, 0.12);
+    div {
+        padding: 0 5px;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.015em;
+    }
+    :nth-child(1) {
+        width: 30%;
+        padding-left: 0;
+        font-weight: normal;
+    }
+    :nth-child(2) {
+        width: 20%;
+    }
+    :nth-child(3) {
+        width: 30%;
+    }
+    :nth-child(4) {
+        width: 20%;
+    }
+}
+
+:host ::ng-deep {
+    .ui-inputswitch {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: rgba(95, 95, 95, 0.2);
+    }
+    .ui-inputswitch-checked {
+        .ui-inputswitch-slider:before  {
+            background: #F3A33A;
+            transform: translateX(80%);
+        }
+    }
+    .ui-inputswitch-slider {
+        width: 42px;
+        height: 24px;
+        background: #FFFFFF;
+        border-radius: 37px;
+        border: 1px solid rgba(95, 95, 95, 0.3);
+        &:before {
+            top: 0;
+            left: 5%;
+            bottom: 0;
+            margin: auto;
+            background: rgb(95, 95, 95, 0.2);
+        }
+    }
+    .ui-helper-hidden-accessible {
+        display: none;
+    }
+}
