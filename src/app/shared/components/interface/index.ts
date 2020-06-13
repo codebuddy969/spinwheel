@@ -8,3 +8,4 @@ export * from './debt-free-chart';
 export * from './pay-amount-chart';
 export * from './remaining-time-chart';
 export * from './amount-slider';
+export * from './donut-rounded';

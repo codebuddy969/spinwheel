@@ -1,0 +1,27 @@
+text {
+    fill: #FFFFFF;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: -0.015em;
+    font-family: "Synthese", sans-serif;
+}
+
+div {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.015em;
+    font-family: "Synthese", sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    text {
+        fill: #000000;
+    }
+    div {
+        color: #000000;
+    }
+}

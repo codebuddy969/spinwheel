@@ -7,6 +7,22 @@
                     <h1>Congrats!</h1>
                     <p>You are on track to meet your monthly goal!</p>
                 </div>
+                <div class="charts" *appMedia="'large'">
+                    <div>
+                        <app-donut-rounded [total]="8000" [saved]="4658" [days]="true"></app-donut-rounded>
+                    </div>
+                    <div>
+                        <app-donut-rounded [total]="78674" [saved]="18053" [days]="false"></app-donut-rounded>
+                    </div>
+                </div>
+            </div>
+            <div class="charts" *appMedia="'small'">
+                <div>
+                    <app-donut-rounded [total]="8000" [saved]="4658" [days]="true" color="#FEF5DA"></app-donut-rounded>
+                </div>
+                <div>
+                    <app-donut-rounded [total]="78674" [saved]="18053" [days]="false" color="#FEF5DA"></app-donut-rounded>
+                </div>
             </div>
             <div class="footer">
                 <div class="icon">

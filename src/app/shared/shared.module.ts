@@ -25,7 +25,8 @@ import {
     RemainingTimeChartComponent,
     AmountSliderComponent,
     EmailComponent,
-    PhoneComponent
+    PhoneComponent,
+    DonutRoundedComponent
 } from './components';
 
 import {MediaDirective} from './directives';
@@ -61,7 +62,8 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         RemainingTimeChartComponent,
         AmountSliderComponent,
         EmailComponent,
-        PhoneComponent
+        PhoneComponent,
+        DonutRoundedComponent
     ],
     imports: [
         CommonModule,
@@ -97,7 +99,8 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         RemainingTimeChartComponent,
         AmountSliderComponent,
         EmailComponent,
-        PhoneComponent
+        PhoneComponent,
+        DonutRoundedComponent
     ]
 })
 export class SharedModule {
