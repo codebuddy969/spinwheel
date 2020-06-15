@@ -1,6 +1,6 @@
 .page {
     &__container {
-        height: 100vh;
+        min-height: calc(100vh - 200px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -10,7 +10,7 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 30px 15px;
 }
 
 .header {
@@ -127,6 +127,11 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .page {
+        &__container {
+            min-height: 100vh;
+        }
+    }
     .container {
         max-width: 360px;
     }

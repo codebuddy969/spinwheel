@@ -1,10 +1,12 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NavigationService} from '@app/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
     selector: 'app-select-loan',
     templateUrl: './select-loan.component.html',
-    styleUrls: ['./select-loan.component.scss']
+    styleUrls: ['./select-loan.component.scss'],
+    providers: [HttpClient]
 })
 export class SelectLoanComponent implements OnInit {
 
@@ -53,11 +55,12 @@ export class SelectLoanComponent implements OnInit {
     count: number = Math.ceil(this.cards.length / 2);
     width: number | string = this.cards.length > 6 ? this.count * 382 - 24 : 'auto';
 
-    constructor(public navService: NavigationService) {
+    constructor(public navService: NavigationService, private http: HttpClient) {
     }
 
     ngOnInit(): void {
-
+        this.http.get('./assets/mockups/select-loan.mockup.json')
+            .subscribe(data => console.log(data));
     }
 
     handleChange(value: number): void {

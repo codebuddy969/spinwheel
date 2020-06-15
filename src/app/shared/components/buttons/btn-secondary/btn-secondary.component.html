@@ -1,6 +1,16 @@
-<a [routerLink]="[link]">
+<ng-template #routeLink>
+    <a [routerLink]="[link]">
+        <span>
+            {{text}}
+            <i class="{{icon}}"></i>
+        </span>
+    </a>
+</ng-template>
+
+<button *ngIf="button; else routeLink" [disabled]="disabled" (click)="clickEvent.emit($event)">
     <span>
-        <ng-content></ng-content>
+        {{text}}
         <i class="{{icon}}"></i>
     </span>
-</a>
+</button>
+

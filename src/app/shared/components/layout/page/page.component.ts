@@ -1,12 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import {NavigationService} from '@app/core';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-page',
     templateUrl: './page.component.html',
     styleUrls: ['./page.component.scss']
 })
-export class PageComponent implements OnInit {
+export class PageComponent implements AfterViewInit {
 
     @Input() link: string;
     @Input() header: string;
@@ -14,11 +15,20 @@ export class PageComponent implements OnInit {
     @Input() button: string;
     @Input() icon: string;
     @Input() board = false;
+    @Input() form: any;
 
-    constructor(public navService: NavigationService) {
+    disabled = true;
+
+    constructor(public navService: NavigationService, private router: Router) {
     }
 
-    ngOnInit(): void {
+    ngAfterViewInit(): void {
+        this.form?.formelement.statusChanges.subscribe(s => this.disabled = s === 'VALID' ? false : true);
+    }
+
+    submitForm(event: MouseEvent): void {
+        this.router.navigate(['/invite-champions/send']);
+        // this.form.formelement.ngSubmit.emit();
     }
 
 }

@@ -1,5 +1,9 @@
 <label for="username">Username</label>
 <div class="form-group">
     <i class="icon-user"></i>
-    <input type="text" id="username" placeholder="Username">
+    <input type="text"
+           id="username"
+           [name]="name"
+           [(ngModel)]="value"
+           placeholder="Username">
 </div>

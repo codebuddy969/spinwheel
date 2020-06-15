@@ -11,8 +11,8 @@
 
         <div class="search">
             <h1 *appMedia="'large'">Select your loan servicer</h1>
-            <app-form>
-                <app-search></app-search>
+            <app-form #formEl>
+                <app-search name="search" label="Search" min="3" [form]="formEl"></app-search>
             </app-form>
         </div>
 

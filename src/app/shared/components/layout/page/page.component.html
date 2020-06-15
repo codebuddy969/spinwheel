@@ -14,12 +14,20 @@
             <div class="info">
                 <ng-content></ng-content>
                 <div class="continue" *appMedia="'large'">
-                    <app-btn-secondary [link]="link">{{button}}</app-btn-secondary>
+                    <app-btn-secondary [link]="link"
+                                       [button]="form ? true : false"
+                                       [text]="button"
+                                       [disabled]="disabled"
+                                       (clickEvent)="submitForm($event)"></app-btn-secondary>
                 </div>
             </div>
         </div>
     </div>
     <div class="page__continue" *appMedia="'small'">
-        <app-btn-secondary [link]="link">{{button}}</app-btn-secondary>
+        <app-btn-secondary [link]="link"
+                           [button]="form ? true : false"
+                           [text]="button"
+                           [disabled]="disabled"
+                           (clickEvent)="submitForm($event)"></app-btn-secondary>
     </div>
 </div>

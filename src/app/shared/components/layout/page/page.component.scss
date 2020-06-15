@@ -18,20 +18,20 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
-    h1 {
-        width: 271px;
-        padding-top: 20px;
-        font-size: 38px;
-        line-height: 46px;
-        letter-spacing: -0.01em;
-    }
-    h2 {
-        margin-top: 24px;
-        font-size: 24px;
-        line-height: 29px;
-    }
     .header {
         padding-right: 15px;
+        h1 {
+            width: 271px;
+            padding-top: 20px;
+            font-size: 38px;
+            line-height: 46px;
+            letter-spacing: -0.01em;
+        }
+        h2 {
+            margin-top: 24px;
+            font-size: 24px;
+            line-height: 29px;
+        }
     }
     .content {
         padding-top: 88px;
@@ -56,24 +56,26 @@ h2 {
     }
 }
 @media only screen and (max-width: 767px) {
-    h1 {
-        font-size: 17px;
-        line-height: 20px;
-        text-align: center;
-        padding-top: 42px;
-        position: relative;
-        i {
-            left: 0;
-            cursor: pointer;
-            position: absolute;
+    .header {
+        h1 {
+            font-size: 17px;
+            line-height: 20px;
+            text-align: center;
+            padding-top: 42px;
+            position: relative;
+            i {
+                left: 0;
+                cursor: pointer;
+                position: absolute;
+            }
         }
-    }
-    h2 {
-        font-size: 14px;
-        margin-top: 4px;
-        line-height: 22px;
-        text-align: center;
-        letter-spacing: -0.015em;
+        h2 {
+            font-size: 14px;
+            margin-top: 4px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.015em;
+        }
     }
     .content {
         max-width: 390px;

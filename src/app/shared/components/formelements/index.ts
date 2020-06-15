@@ -6,3 +6,4 @@ export * from './personal-code';
 export * from './account-number';
 export * from './email';
 export * from './phone';
+export * from './input-field';

@@ -6,6 +6,7 @@ import {SharedModule} from '@app/shared';
 import {routes} from './invite-champs.routing';
 import {InviteFormComponent} from './invite-form';
 import {InviteSentComponent} from './invite-sent';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,9 @@ import {InviteSentComponent} from './invite-sent';
     imports: [
         CommonModule,
         RouterModule.forChild(routes),
-        SharedModule
+        SharedModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class InviteChampsModule {

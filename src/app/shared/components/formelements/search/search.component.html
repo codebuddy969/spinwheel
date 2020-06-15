@@ -1,4 +1,8 @@
 <fieldset>
-    <input type="search" placeholder="Search">
+    <input type="search"
+           name="search"
+           #field='ngModel'
+           [(ngModel)]="value"
+           placeholder="Search">
     <button><i class="icon-search"></i></button>
 </fieldset>

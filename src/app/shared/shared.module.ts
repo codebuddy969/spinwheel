@@ -26,10 +26,11 @@ import {
     AmountSliderComponent,
     EmailComponent,
     PhoneComponent,
-    DonutRoundedComponent
+    DonutRoundedComponent,
+    InputFieldComponent
 } from './components';
 
-import {MediaDirective} from './directives';
+import {MediaDirective, ValidationDirective} from './directives';
 import {NumIteratorPipe, YearsIteratorPipe} from './pipes';
 
 import {SliderModule} from 'primeng/slider';
@@ -41,6 +42,7 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         BtnPrimaryComponent,
         BtnSecondaryComponent,
         MediaDirective,
+        ValidationDirective,
         NavbarComponent,
         FooterComponent,
         FormComponent,
@@ -63,7 +65,8 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         AmountSliderComponent,
         EmailComponent,
         PhoneComponent,
-        DonutRoundedComponent
+        DonutRoundedComponent,
+        InputFieldComponent
     ],
     imports: [
         CommonModule,
@@ -78,6 +81,7 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         BtnPrimaryComponent,
         BtnSecondaryComponent,
         MediaDirective,
+        ValidationDirective,
         NavbarComponent,
         FooterComponent,
         FormComponent,
@@ -100,7 +104,8 @@ import {SplitButtonModule} from 'primeng/splitbutton';
         AmountSliderComponent,
         EmailComponent,
         PhoneComponent,
-        DonutRoundedComponent
+        DonutRoundedComponent,
+        InputFieldComponent
     ]
 })
 export class SharedModule {

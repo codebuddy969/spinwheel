@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {FormControlBase, CreateAccessorFor} from '../form-control';
 
 @Component({
-  selector: 'app-username',
-  templateUrl: './username.component.html',
-  styleUrls: ['../styles.scss']
+    selector: 'app-username',
+    templateUrl: './username.component.html',
+    styleUrls: ['../styles.scss'],
+    providers: CreateAccessorFor(UsernameComponent)
 })
-export class UsernameComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class UsernameComponent extends FormControlBase {
 
 }
