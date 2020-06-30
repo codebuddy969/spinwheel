@@ -2,6 +2,11 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NavigationService} from '@app/core';
 import {HttpClient} from '@angular/common/http';
 
+interface ICards {
+    name: string;
+    image: string;
+}
+
 @Component({
     selector: 'app-select-loan',
     templateUrl: './select-loan.component.html',
@@ -12,55 +17,21 @@ export class SelectLoanComponent implements OnInit {
 
     @ViewChild('slide') private readonly slide: ElementRef<any>;
 
-    cards = [
-        {
-            name: 'nelnet',
-            image: 'nelnet.png'
-        },
-        {
-            name: 'navient',
-            image: 'navient.png'
-        },
-        {
-            name: 'mohela',
-            image: 'mohela.png'
-        },
-        {
-            name: 'heartland',
-            image: 'heartland.png'
-        },
-        {
-            name: 'cornerstone',
-            image: 'cornerstone.png'
-        },
-        {
-            name: 'granite',
-            image: 'granite.png'
-        },
-        {
-            name: 'mohela',
-            image: 'mohela.png'
-        },
-        {
-            name: 'cornerstone',
-            image: 'cornerstone.png'
-        },
-        {
-            name: 'heartland',
-            image: 'heartland.png'
-        }
-    ];
-
-    margin: number = 0;
-    count: number = Math.ceil(this.cards.length / 2);
-    width: number | string = this.cards.length > 6 ? this.count * 382 - 24 : 'auto';
+    width: number | string;
+    cards: ICards[] = [];
+    margin = 0;
+    count = 0;
 
     constructor(public navService: NavigationService, private http: HttpClient) {
     }
 
     ngOnInit(): void {
-        this.http.get('./assets/mockups/select-loan.mockup.json')
-            .subscribe(data => console.log(data));
+        this.http.get<ICards[]>('./assets/mockups/select-loan.mockup.json')
+            .subscribe(data => {
+                this.cards = data;
+                this.count = Math.ceil(this.cards.length / 2);
+                this.width = this.cards.length > 6 ? this.count * 382 - 24 : 'auto';
+            });
     }
 
     handleChange(value: number): void {

@@ -1,12 +1,6 @@
 import {forwardRef, Input, Output} from '@angular/core';
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, Validators} from '@angular/forms';
 
-export const ValidationRules = {
-    username: [Validators.required, Validators.minLength(3)],
-    email: [Validators.required, Validators.email],
-    phone: [Validators.minLength(3)]
-}
-
 export abstract class FormControlBase<T = any> implements ControlValueAccessor {
 
     @Input() id: string;
@@ -29,16 +23,11 @@ export abstract class FormControlBase<T = any> implements ControlValueAccessor {
     public set value(value: T) {
         if (this.control?.value !== value) {
             this.control.setValue(value);
-            this.onChanged(value);
-            this.onTouched();
         }
     }
 
     private onChanged: any = (_: any) => {}
-    private onTouched: any = (_: any) => {
-        this.control.setValidators(ValidationRules[this.name]);
-        this.control.updateValueAndValidity();
-    }
+    private onTouched: any = (_: any) => {}
 
     public writeValue(value: any): void {
         if (this.control?.value !== value) this.control.setValue(value);

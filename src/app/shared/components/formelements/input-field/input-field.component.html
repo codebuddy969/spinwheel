@@ -6,13 +6,15 @@
            [name]="name"
            #field='ngModel'
            [minlength]="min"
+           [pattern]="pattern"
            [(ngModel)]="value"
            [placeholder]="label"
            [email]="name === 'email' ? true : false">
 </div>
 
-<div class="errors" *ngIf="field.touched">
+<div class="errors" *ngIf="field.errors">
     <small *ngIf="field.errors?.minlength">Field length is less than 3 characters!</small>
     <small *ngIf="field.errors?.required">Field is a required!</small>
     <small *ngIf="field.errors?.email">This is not a valid Email!!!</small>
+    <small *ngIf="field.errors?.pattern">Phone is not valid (ex: 555-555-5555)</small>
 </div>

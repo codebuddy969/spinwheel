@@ -1,6 +1,6 @@
 import {Component, AfterViewInit, ViewChild, ContentChildren, QueryList, ChangeDetectorRef} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {FormControlBase, ValidationRules} from '../form-control';
+import {FormControlBase} from '../form-control';
 
 @Component({
     selector: 'app-form',
@@ -17,11 +17,7 @@ export class FormComponent implements AfterViewInit {
     constructor(private cdk: ChangeDetectorRef) {}
 
     ngAfterViewInit(): void {
-        this.controls.forEach(c => {
-            this.formelement.form.addControl(c.name, c.control);
-            this.formelement.form.controls[c.name].setValidators(ValidationRules[c.name]);
-            this.formelement.form.controls[c.name].updateValueAndValidity();
-        });
+        this.controls.forEach(c => this.formelement.form.addControl(c.name, c.control));
         this.cdk.detectChanges();
     }
 

@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ViewChild} from '@angular/core';
 import {CreateAccessorFor, FormControlBase} from '../form-control';
+import {NgForm} from '@angular/forms';
 
 @Component({
     selector: 'app-input-field',
@@ -16,4 +17,6 @@ export class InputFieldComponent extends FormControlBase {
     @Input() icon: string;
 
     @Input() min: number;
+
+    @Input() pattern = '';
 }

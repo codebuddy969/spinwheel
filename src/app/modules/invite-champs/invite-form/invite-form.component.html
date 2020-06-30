@@ -6,7 +6,7 @@
     <app-form #formEl>
         <app-input-field type="text" name="username" label="Username" icon="icon-user" min="3"></app-input-field>
         <app-input-field type="email" name="email" label="Email" icon="icon-email-stroke"></app-input-field>
-        <app-input-field type="text" name="phone" label="Phone" icon="icon-handset" min="3"></app-input-field>
+        <app-input-field type="tel" name="phone" label="Phone" icon="icon-handset" min="3" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></app-input-field>
     </app-form>
 
 </app-page>
